@@ -29,39 +29,34 @@ void RemoveConsecutiveDuplicates(std::stack<int>& values) {
         aux.pop();
     }
 }
-/*int main (){
 
-stack<int>
-    numbers.push(1); //encargada de insertar o agregar un elemento nuevo, y la va colocando por encima en la pila. 
-    numbers.push(2);
-    numbers.push(3);
-    numbers.push(4);
-
-
+// Función para ver la pila
+void ImprimirPila(std::stack<int> s) {
+    while (!s.empty()) {
+        std::cout << s.top() << " ";
+        s.pop();
+    }
+    std::cout << std::endl;
 }
-   
-   
-   
-   
-   
-   
-   
-   int main (){
 
+int main() {
+    std::stack<int> values;
 
+    // Insertamos los elementos desde el fondo hacia el tope
+    // para que al imprimir queden: 5 5 5 8 8 3 7 7 2 2 (tope -> fondo)
+    int elementos[] = {2, 2, 7, 7, 3, 8, 8, 5, 5, 5};
+    for (int num : elementos) {
+        values.push(num);
+    }
 
-    stack<int> numbers;
-    numbers.push(1); //encargada de insertar o agregar un elemento nuevo, y la va colocando por encima en la pila. 
-    numbers.push(2);
-    numbers.push(3);
-    numbers.push(4);
+    std::cout << "Pila inicial (tope a fondo):   ";
+    ImprimirPila(values);
 
-    cout<<"TOP: "<<numbers.top()<<endl; //4
-    numbers.pop(); //Eliminar 4 //pop Es la función encargada de eliminar el elemento que le toca salir, la pila borra al que está mero arriba en la cima
-    cout<<"TOP: "<<numbers.top()<<endl; //3
-    numbers.pop(); //Eliminar 3
-    cout<<"TOP: "<<numbers.top()<<endl; //2
-    numbers.pop(); //Eliminar 2
+    // Ejecutamos la función solicitada
+    RemoveConsecutiveDuplicates(values);
+
+    std::cout << "Pila resultante (tope a fondo): ";
+    ImprimirPila(values);
 
     return 0;
 }

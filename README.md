@@ -14,6 +14,7 @@ int CountMatches(const int values[], int n) {
 
   return count;
 }
-1. En este caso seria un O(n^2 ), puesto a que primero empieza con un for(n), seguido de otro y dentro de ese otro se encuentra un if, que se repetira n veces dependiendo del tamano del arreglo, al sumar esos dos: (O(n)+O(n)=2O(n), las constantes se eliminan y como nos queda uno anidado, se multiplican	(O(n)×O(n)), lo que resulta en O(n^2 ).
+1. En este caso seria un O(n ) lineal, puesto a que primero empieza con un for(n), seguido de otro y dentro de ese otro se encuentra un if, que se repetira n veces dependiendo del tamano del arreglo, al sumar esos dos: (O(n)+O(n)=2O(n), las constantes se eliminan por lo que solo nos queda o(n). 
+2. El numero de comparaciones se duplica, por las n veces que se repite osea se multiplica por dos. 
 
 
