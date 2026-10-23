@@ -42,8 +42,7 @@ void ImprimirPila(std::stack<int> s) {
 int main() {
     std::stack<int> values;
 
-    // Insertamos los elementos desde el fondo hacia el tope
-    // para que al imprimir queden: 5 5 5 8 8 3 7 7 2 2 (tope -> fondo)
+    // Insertamos los elementos desde el fondo hacia el tope 
     int elementos[] = {2, 2, 7, 7, 3, 8, 8, 5, 5, 5};
     for (int num : elementos) {
         values.push(num);
