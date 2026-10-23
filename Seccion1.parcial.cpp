@@ -17,3 +17,22 @@ void Insert(Node*& head, int data){
     head = new_node;
 }
 
+void PrintList(Node* head){
+    Node* current = head;
+
+    while(current != nullptr){
+        std::cout<<current->data<<" -> ";
+        current = current->next;
+    }
+
+    std::cout<<std::endl;
+}
+
+
+int main (){
+
+
+
+
+    return 0; 
+}
