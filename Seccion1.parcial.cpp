@@ -17,6 +17,26 @@ void Insert(Node*& head, int data){
     head = new_node;
 }
 
+void Insertalfinal(Node*& head, int data){
+    Node* new_node = new Node{data, nullptr, nullptr};  //next y prev apuntan a nullptr, antes de hcaer los cambios.
+
+    //Si esto ocurre es porque la lista esta vacia
+    if(head == nullptr){
+        head = new_node;
+        return;
+    }
+
+    //Pero esto pasa si acaso no esta vacia
+    Node* current = head;
+
+    while(current->next != nullptr){
+        current = current->next;
+    }
+
+    current->next = new_node;  //El current apunta al siguiente que se convierte en el nuevo nodo, y ese nuevo nodo apunta de regreso al anterior. -> <-
+    new_node->prev = current;
+}
+
 void PrintList(Node* head){
     Node* current = head;
 
