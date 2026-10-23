@@ -47,6 +47,15 @@ void PrintList(Node* head){
 
     std::cout<<std::endl;
 }
+//Funcion para liberar memoria. 
+void Liberarmemoria (Node*& head){
+
+     while(head != nullptr){
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
 
 
 int main (){
