@@ -59,7 +59,57 @@ void Liberarmemoria (Node*& head){
 
 
 int main (){
+ Node* lista = nullptr;
 
+    int option = 0;
+
+    do{
+        std::cout<<"1. Insertar al inicio"<<std::endl;
+        std::cout<<"2. Insertar al final"<<std::endl;
+        std::cout<<"3. Imprimir lista"<<std::endl;
+        std::cout<<"4. Liberar memoria"<<std::endl;
+        
+        std::cin>>option;
+
+        switch(option){
+            case 1:{
+                int n;
+                std::cout<<"Ingrese un numero: ";
+                std::cin>>n;
+
+                Insert(lista, n);
+
+                break;
+            }
+            case 2:{
+                int n;
+                std::cout<<"Ingrese un numero: ";
+                std::cin>>n;
+
+                Insertalfinal(lista, n);
+
+                break;
+            }
+            case 3:{
+                PrintList(lista);
+                break;
+            }
+            case 4:{
+                std::cout<<"Liberando memoria..."<<std::endl;
+                Liberarmemoria(lista);
+                break;
+            }
+        
+            default:{
+                std::cout<<"Opcion invalida"<<std::endl;
+                break;
+            }
+        }
+    }while(option != 100);
+
+
+    return 0;
+}
 
 
 
